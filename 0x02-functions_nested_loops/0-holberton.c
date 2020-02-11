@@ -9,14 +9,13 @@ int main(void)
 	char *word;
 	int i;
 
-	word =  "Holberton";
+	word =  "Holberton\n";
 
 
 	for (i = 0; i <= 9; i++)
 	{
 		_putchar(word[i]);
 	}
-	_putchar('\n');
 	return (0);
 }
 
