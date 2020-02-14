@@ -1,33 +1,24 @@
 #include <stdio.h>
+
 /**
- * main - Holberton main
- *
- * Return: Always 0.
+ * main - Entry point
+ * Return: Always 0
  */
 int main(void)
 {
-	long int n;
+	long n, div;
 
 	n = 612852475143;
 
-	long int div = 2, ans = 0, maxFact;
-
-	while (n != 0)
+	for (div = 2; div < n; div++)
 	{
-		if (n % div != 0)
-			div = div + 1;
-		else
+		while (n % div == 0)
 		{
-			maxFact = n;
 			n = n / div;
-			if (n == 1)
-			{
-				printf("%d is the largest prime factor !", maxFact);
-				ans = 1;
-				break;
-			}
 		}
 	}
+	printf("%lu", div);
 	printf("\n");
 	return (0);
 }
+
