@@ -1,5 +1,17 @@
 #include "holberton.h"
 /**
+ * isnumber - checks if this variable is a number.
+ * @c: variables num
+ *
+ * Return: returns (1) if it's true
+ */
+int isnumber(int c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+
+/**
  * _atoi - convert a string to an integer.
  * @s: Pointer
  * Return: Always 0.
@@ -14,11 +26,7 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (n != '0' && n != '9')
-		{
-			return (0);
-		}
-		else if (s[i] >= '0' && s[i] <= '9')
+		if (isnumber(s[i]))
 		{
 			n = (s[i] - '0') + n * 10;
 			if (s[i + 1] == ' ')
