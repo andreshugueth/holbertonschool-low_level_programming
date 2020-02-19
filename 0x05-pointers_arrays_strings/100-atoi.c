@@ -14,24 +14,21 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (n >= '0' && n <= '9')
-		{
-			if (s[i] >= '0' && s[i] <= '9')
-			{
-				n = (s[i] - '0') + n * 10;
-				if (s[i + 1] == ' ')
-				{
-					break;
-				}
-			}
-			else if (s[i] == '-')
-			{
-				x = x * -1;
-			}
-		}
-		else
+		if (n != '0' && n != '9')
 		{
 			return (0);
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			n = (s[i] - '0') + n * 10;
+			if (s[i + 1] == ' ')
+			{
+				break;
+			}
+		}
+		else if (s[i] == '-')
+		{
+			x = x * -1;
 		}
 	}
 
