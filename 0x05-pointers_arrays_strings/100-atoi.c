@@ -16,10 +16,17 @@ int _atoi(char *s)
 	{
 		if (s[i] >= '0' && s[i] >= '9')
 		{
-			n = (s[i] - '0') + n * 10;
-			if (s[i+1] == ' ')
+			if (n >= '0' && n <= '9')
 			{
-				break;
+				n = (s[i] - '0') + n * 10;
+				if (s[i + 1] == ' ')
+				{
+					break;
+				}
+			}
+			else
+			{
+				return (0);
 			}
 		}
 		else if (s[i] == '-')
@@ -30,3 +37,4 @@ int _atoi(char *s)
 
 	return (n * x);
 }
+
