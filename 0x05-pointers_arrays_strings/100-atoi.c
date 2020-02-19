@@ -14,9 +14,9 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= '0' && s[i] >= '9')
+		if (n >= '0' && n <= '9')
 		{
-			if (n >= '0' && n <= '9')
+			if (s[i] >= '0' && s[i] <= '9')
 			{
 				n = (s[i] - '0') + n * 10;
 				if (s[i + 1] == ' ')
@@ -24,14 +24,14 @@ int _atoi(char *s)
 					break;
 				}
 			}
-			else
+			else if (s[i] == '-')
 			{
-				return (0);
+				x = x * -1;
 			}
 		}
-		else if (s[i] == '-')
+		else
 		{
-			x = x * -1;
+			return (0);
 		}
 	}
 
