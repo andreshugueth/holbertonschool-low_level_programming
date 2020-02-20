@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _strcat - concatenates two strings.
+ * _strncat - concatenates two strings.
  * @dest: Destiny
  * @src: source
  * @n: bytes from src
