@@ -1,24 +1,24 @@
 #include "holberton.h"
 /**
  * _isalpha - The letter is a letter.
- * @c: character.
+ * @e: character.
  * Return: Return 1 if it's truth.
  */
-int _isalpha(char c)
+int _isalpha(char e)
 {
-	return (c >= 'a' && c <= 'z');
+	return (e >= 'a' && e <= 'z');
 }
 /**
  * _bypunt - Checks if the word is precessed by a puntiation sign.
- * @sim: character.
+ * @simb: character.
  * Return: Return 1 if it's truth.
  */
-int _bypunt(char sim)
+int _bypunt(char simb)
 {
-	return (sim == ',' || sim == ';' || sim == '.'
-			|| sim == '!' || sim == '?' || sim == '"'
-			|| sim == '(' || sim == ')' || sim == '{'
-			|| sim == '}' || sim == ' ');
+	return (simb == ',' || simb == ';' || simb == '.'
+			|| simb == '!' || simb == '?' || simb == '"'
+			|| simb == '(' || simb == ')' || simb == '{'
+			|| simb == '}' || simb == ' ');
 }
 /**
  * cap_string - Capitalizes all words of a string.
@@ -43,3 +43,4 @@ char *cap_string(char *s)
 	}
 	return (s);
 }
+
