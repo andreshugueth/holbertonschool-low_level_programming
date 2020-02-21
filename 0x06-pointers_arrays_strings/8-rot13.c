@@ -7,8 +7,8 @@
 char *rot13(char *s)
 {
 	int i, j;
-	char arr1[] = "ABCDEFGHIJKLMabcdefghijklm";
-	char arr2[] = "NOPQRSTUVWXYZnopqrstuvwxyz";
+	char arr1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char arr2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -17,10 +17,7 @@ char *rot13(char *s)
 			if (s[i] == arr1[j])
 			{
 				s[i] = arr2[j];
-			}
-			else if (s[i] == arr2[j])
-			{
-				s[i] = arr1[j];
+				break;
 			}
 		}
 	}
