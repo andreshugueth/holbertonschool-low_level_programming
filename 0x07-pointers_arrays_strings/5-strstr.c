@@ -8,21 +8,19 @@
  **/
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	int i, j, k;
 
-	for (; *haystack != '\0'; haystack++)
+	for (i = 0 ; haystack[i] != 0 ; i++)
 	{
-		for (i = 0; needle[i] != '\0'; i++)
+		for (k = i, j = 0 ; needle[j] != 0 ; j++, k++)
 		{
-			if (*haystack != needle[i] || *haystack == '\0')
+			if (haystack[k] != needle[j] || haystack[k] == 0)
 			{
 				break;
 			}
-			else if (*haystack == needle[i])
-			{
-				return (haystack);
-			}
 		}
+		if (needle[j] == 0)
+			return (&haystack[i]);
 	}
 	return (0);
 }
