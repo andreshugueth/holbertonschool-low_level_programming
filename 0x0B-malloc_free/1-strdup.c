@@ -33,6 +33,12 @@ char *_strdup(char *str)
 
 	s = malloc(sizeof(char) * _strlen(str));
 	i = 0;
+
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+
 	while (i < _strlen(str))
 	{
 		s[i] = str[i];

@@ -20,6 +20,11 @@ char *create_array(unsigned int size, char c)
 	p = malloc(sizeof(char) * size);
 	i = 0;
 
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+
 	while (i < size)
 	{
 		p[i] = c;
