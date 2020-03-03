@@ -28,9 +28,16 @@ char *str_concat(char *s1, char *s2)
 	char *s3;
 	int i, j, k;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = malloc(1);
+		*s1 = ' ';
+	}
+
+	if (s2 == NULL)
+	{
+		s2 = malloc(1);
+		*s2 = ' ';
 	}
 
 	s3 = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
