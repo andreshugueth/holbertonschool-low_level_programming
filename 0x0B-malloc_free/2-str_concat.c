@@ -29,14 +29,12 @@ char *str_concat(char *s1, char *s2)
 	int i, j, k;
 
 	if (s1 == NULL)
-	{
-		s1 = malloc(1);
-		*s1 = ' ';
+	{;
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = malloc(1);
-		*s2 = ' ';
+		s2 = "";
 	}
 	s3 = (char *)malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (s3 == NULL)
@@ -44,20 +42,18 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 	k = 0;
-	i = 0;
-	j = 0;
-	while (i < _strlen(s1))
+	for (i = 0; s1[i] != '\0'; i++)
 	{
 		s3[k] = s1[i];
-		i++;
 		k++;
 	}
-	while (j < _strlen(s2))
+
+	for (j = 0; s2[j] != '\0'; j++)
 	{
 		s3[k] = s2[j];
-		j++;
 		k++;
 	}
+
 	s3[k] = '\0';
 	return (s3);
 }
