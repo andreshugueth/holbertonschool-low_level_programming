@@ -33,7 +33,12 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	s3 = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2)));
+	s3 = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+
+	if (s3 == NULL)
+	{
+		return (NULL);
+	}
 
 	k = 0;
 	i = 0;
@@ -56,3 +61,4 @@ char *str_concat(char *s1, char *s2)
 
 	return (s3);
 }
+
