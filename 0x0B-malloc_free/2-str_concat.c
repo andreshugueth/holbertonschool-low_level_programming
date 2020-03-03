@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 	k = 0;
 	i = 0;
 	j = 0;
-	while (i <= _strlen(s1))
+	while (i < _strlen(s1))
 	{
 		s3[k] = s1[i];
 		i++;
