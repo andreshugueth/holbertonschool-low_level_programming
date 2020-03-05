@@ -39,37 +39,27 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	m = _strlen(s2);
 
 	if (n >= m)
-	{
 		s3 = malloc(sizeof(char) * (l + m + 1));
-	}
 	else
-	{
 		s3 = malloc(sizeof(char) * (l + n + 1));
-	}
 
 	if (s3 == NULL)
 		return (NULL);
 
 	k = 0;
 	j = 0;
-
 	for (i = 0; i < l; i++, k++)
-	{
 		s3[k] = s1[i];
-	}
-	if (n >=m)
+
+	if (n >= m)
 	{
 		for (; k < (l + m); j++, k++)
-		{
 			s3[k] = s2[j];
-		}
 	}
 	else
 	{
 		for (; k < (l + n); k++, j++)
-		{
 			s3[k] = s2[j];
-		}
 	}
 	s3[k] = '\0';
 	return (s3);
