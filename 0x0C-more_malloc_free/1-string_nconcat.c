@@ -35,8 +35,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	l= _strlen(s1);
-	m= _strlen(s2);
+	l = _strlen(s1);
+	m = _strlen(s2);
 
 	if (n >= m)
 		n = m;
