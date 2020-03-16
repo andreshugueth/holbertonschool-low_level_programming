@@ -10,8 +10,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 /**
   * struct p - checker struct
-  *
-  * @p: possibility 
+  * @p: possibility
   * @f: Function to be used
   */
 typedef struct p
