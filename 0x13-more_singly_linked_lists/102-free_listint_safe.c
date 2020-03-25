@@ -12,7 +12,7 @@ size_t free_listint_safe(listint_t **h)
 	for (i = sw = 0; *h != NULL || sw; i++)
 	{
 
-		if (*h <=(*h)->next)
+		if (*h <= (*h)->next)
 		{
 			sw = 1;
 			break;
