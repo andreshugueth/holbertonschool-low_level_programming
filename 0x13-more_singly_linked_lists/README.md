@@ -12,4 +12,3 @@ The only C standard library functions allowed are malloc, free and exit.
 You are not allowed to use global variables.
 No more than 5 functions per file.
 All your header files should be include guarded.
-```
