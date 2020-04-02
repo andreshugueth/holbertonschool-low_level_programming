@@ -1,6 +1,5 @@
 # 0x15. C - File I/O
-
-<iframe src="https://giphy.com/embed/349qKnoIBHK1i" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-program-programmers-349qKnoIBHK1i">via GIPHY</a></p>
+<img src="https://media.giphy.com/media/rVVFWyTINqG7C/source.gif" title="made_at_giphy.com"/>
 
 ## Objectives
 
