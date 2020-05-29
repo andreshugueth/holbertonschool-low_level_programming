@@ -1,5 +1,5 @@
 #include "hash_tables.h"
-/*
+/**
  * ht_pair - set the node to the table
  * @key: id of the hash_table
  * @value: value stored in the key
@@ -25,11 +25,11 @@ hash_node_t *ht_pair(const char *key, const char *value)
 
 	entry->next = NULL;
 
-	return entry;
+	return (entry);
 }
-/*
+/**
  * hash_table_set - sets a key & value to a ht
- * @ht: hash table 
+ * @ht: hash table
  * @key: id of the hash table
  * @value: value stored in key
  *
