@@ -13,15 +13,9 @@ hash_node_t *ht_pair(const char *key, const char *value)
 	entry = malloc(sizeof(hash_node_t *));
 	if (!entry)
 		return (NULL);
-	entry->key = malloc(strlen(key) + 1);
-	if (!entry->key)
-		return (NULL);
-	entry->value = malloc(strlen(value) + 1);
-	if (!entry->value)
-		return (NULL);
 
-	strcpy(entry->key, key);
-	strcpy(entry->value, value);
+	entry->key = strdup(key);
+	entry->value = strdup(value);
 
 	entry->next = NULL;
 
